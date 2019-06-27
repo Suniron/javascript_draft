@@ -218,4 +218,41 @@ switch (x) {
     console.log("x vaut def");
     break;
 }
+
+// -- REPETER DES INSTRUCTIONS --
+// Exemple: boucle while:
+console.log("Début du programme");
+let nombre = 1;
+while (nombre <= 5) {
+  console.log(nombre);
+  nombre++;
+}
+console.log("Fin du programme");
+
+// Modèle: while:
+while (condition) {
+  // instructions exécutées tant que la condition est vérifiée
+}
+
+// Exemple: boucle for:
+let compteur;
+for (compteur = 1; compteur <= 5; compteur++) {
+  console.log(compteur);
+}
+
+// Modèle: boucle for:
+for (initialisation; condition; étape) {
+  // instructions exécutées tant que la condition est vérifiée
+}
+// Infos:
+//  L'initialisation se produit une seule fois, au début de l'exécution.
+//  La condition est évaluée avant chaque tour de boucle. Si elle est vraie, un nouveau tour de boucle est effectué. Sinon, la boucle est terminée.
+//  L'étape est réalisée après chaque tour de boucle.
+
+// Exemple 2: boucle for:
+for (let i = 1; i <= 5; i++) {
+    console.log(i); // OK
+}
+console.log(i); // Erreur : la variable i n'est pas visible ici
+
 */
