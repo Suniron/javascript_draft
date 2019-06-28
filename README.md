@@ -9,6 +9,6 @@ My draft to learn JavaScript language
 
 # Usage
 
->Open *launcher.html* in a web browser to lunch uncommenteds lines.
+>Open *launcher_bases.html* in a web browser to lunch bases.js.
 or
 >Execute node App.js in a terminal.

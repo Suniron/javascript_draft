@@ -255,4 +255,49 @@ for (let i = 1; i <= 5; i++) {
 }
 console.log(i); // Erreur : la variable i n'est pas visible ici
 
+// -- FONCTIONS --
+// Exemple: fonction:
+function direBonjour() {
+  console.log("Bonjour !");
+}
+
+console.log("Début du programme");
+direBonjour();
+console.log("Fin du programme");
+
+// Exemple: Déclarer une fonction nommée maFonction:
+function maFonction() {
+  // Instructions de la fonction
+}
+
+// Appeler la fonction direBonjour():
+console.log("Début du programme");
+direBonjour();
+console.log("Fin du programme");
+
+// Créer une fonction qui retourne une valeur:
+function direBonjour() {
+  return "Bonjour !";
+}
+
+console.log("Début du programme");
+const resultat = direBonjour();
+console.log(resultat); // "Bonjour !"
+console.log("Fin du programme");
+
+// Modèle: fonction anonyme:
+// Affectation d'une fonction anonyme à la variable maVariable
+const maVariable = (param1, param2, ...) => {
+  // Instructions pouvant utiliser param1, param2, ...
+}
+
+// Appel de la fonction anonyme
+// param1 reçoit la valeur de arg1, param2 la valeur de arg2, ...
+maVariable(arg1, arg2, ...);
 */
+// Réduire au plus simple une fonction flechée (= anonyme):
+// Dificile de faire plus concis !
+const bonjour = prenom => `Bonjour, ${prenom} !`;
+
+console.log(bonjour("Thomas")); // "Bonjour, Thomas !"
+
