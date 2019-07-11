@@ -1,0 +1,27 @@
+<p>Le compteur de visite est à <%=count%></p>
+	<h1>Todo List:</h1>
+	<p><%
+      // Si la liste est vide:
+			if (todoList.length === 0) {
+        %>Il faut rajouter un premier élément ;-).<%
+			} 
+      // Si la liste n'est pas vide:
+      else {
+        %><ul><%
+        // pour chaque élément de la liste:
+        for (var elem in todoList) {%>
+          <li>
+            <form method="post">
+              <button type="submit" name="delTodo" value=<%=todoList[elem]%>>X</button>
+              <%=todoList[elem]%>
+            </form>
+          </li>
+      <%}
+      %></ul><%
+      }%>
+  </p>
+  <form method="post">
+    <label>Elément à ajouter:</label>
+    <input type="text" name="newTodo"></input>
+    <button type="submit">Valider</button>
+  </form>

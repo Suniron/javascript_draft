@@ -18,11 +18,21 @@ app.get('/etage/1/chambre', function(req, res) {
     res.send('Hé ho, c\'est privé ici !');
 });
 
+app.get('/etage/:etagenum/chambre', function(req, res) {
+    res.render('chambre.ejs', {etage: req.params.etagenum});
+});
+
+app.get('/compter/:nombre', function(req, res) {
+    var noms = ['Robert', 'Jacques', 'David'];
+    res.render('calculs.ejs', {compteur: req.params.nombre, noms: noms});
+});
+
 // ROUTES DYNAMIQUES:
 app.get('/etage/:etagenum/chambre', function(req, res) { // Avec création d'un paramètre 'etagenum'
     res.setHeader('Content-Type', 'text/plain');
     if (parseInt(req.params.etagenum)) {
-        res.end('Vous etes a la chambre de l\'etage numero' + req.params.etagenum); // Récupération du contenu de 'etagenum'
+        //res.end('Vous etes a la chambre de l\'etage numero' + req.params.etagenum); // Récupération du contenu de 'etagenum'
+        res.render('chambre.ejs', {etage: req.params.e})
     } else {
         res.end('Vous croyez que c\'est un numero pour un etage ca: "' + req.params.etagenum+'" ? --\'');
     }
